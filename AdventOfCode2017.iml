@@ -31,5 +31,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21.2" level="project" />
   </component>
 </module>
