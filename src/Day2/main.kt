@@ -23,7 +23,7 @@ fun calculate2(data: String): Int {
     return intList.fold(0){sum: Int, a: List<Int> ->
         // idk why labels dont wanna work here that's why i used it2 :(
         sum + a.map{ outIt ->
-            a.filter{ outIt % it == 0 && outIt != it}.map{outIt / it}.sum()
+            a.filter{ outIt % it == 0 && outIt != it}.map{outIt / it}.sum() // could use fold here but it would decrease readability
         }.sum()
     }
 }
