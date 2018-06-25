@@ -4,7 +4,6 @@ package Day2
 // name might be a bit generic but i consider each day as separated being
 fun String.parseToArray(): List<List<Int>> = this.lines().map{ it.split("\t").map{it.trim().toInt()}}
 
-
 // Part I
 fun calculate(data: String): Int {
     // Split it nicely
@@ -22,8 +21,8 @@ fun calculate2(data: String): Int {
 
     return intList.fold(0){sum: Int, a: List<Int> ->
         // idk why labels dont wanna work here that's why i used it2 :(
-        sum + a.map{ outIt ->
-            a.filter{ outIt % it == 0 && outIt != it}.map{outIt / it}.sum() // could use fold here but it would decrease readability
+        sum + a.flatMap{ outIt ->
+            a.filter{ outIt % it == 0 && outIt != it}.map{outIt / it}
         }.sum()
     }
 }
