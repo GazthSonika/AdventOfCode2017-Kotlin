@@ -19,20 +19,18 @@ fun calculate(data: Long): Long {
 
 
 fun calculate2(data: Long): Long {
-    //can assume that size of grid is less then [a; a] where a = sqrt(data)
-    return Grid().calculateUntil( data)
-
+    return Grid().calculateUntil(data)
 }
 
 
 fun main(args: Array<String>) {
 
-    val data = 6915270000000000000
+    val data = 6915270000000000000L
 
-    val ret = calculate(data.toLong())
+    val ret = calculate(data)
     println("Part 1: $ret")
 
-    val ret2 = calculate2(data.toLong())
+    val ret2 = calculate2(data)
     println("Part 2: $ret2")
 
 }

@@ -25,4 +25,3 @@ object Right: Direction() {
     override fun walk(position: Position): Position = Position(position.first+1, position.second)
     override fun next(): Direction = Up
 }
-
