@@ -36,7 +36,7 @@ fun calculate(data: String): Pair<Int, String> {
     return Pair(turn, banks.parseToString())
 }
 
-// Part I  WOW with the first try
+// Part II
 fun calculate2(data: String): Pair<Int, String>{
     val (cycles, banks) = calculate(data)
     return calculate(banks)
